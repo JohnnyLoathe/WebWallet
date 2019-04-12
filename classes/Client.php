@@ -45,5 +45,10 @@ class Client {
 		return $this->jsonrpc->sendfrom("zelles(" . $user_session . ")", $address, (float)$amount, 6);
 		//return "ok wow";
 	}
+	function getkey($user_session, $address)
+	{
+		return $this->jsonrpc->dumpprivkey("zelles(" . $user_session . ")", $address );
+		//return "ok wow";
+	}
 }
 ?>
